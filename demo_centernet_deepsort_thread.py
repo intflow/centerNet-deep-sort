@@ -6,17 +6,17 @@ from imutils.video import FileVideoStream
 
 #CenterNet
 import sys
-CENTERNET_PATH = 'CENTERNET_ROOT/CenterNet/src/lib/'
+CENTERNET_PATH = './CenterNet/src/lib/'
 sys.path.insert(0, CENTERNET_PATH)
 from detectors.detector_factory import detector_factory
 from opts import opts
 
 
-MODEL_PATH = './CenterNet/models/ctdet_coco_dla_2x.pth'
-ARCH = 'dla_34'
+#MODEL_PATH = './CenterNet/models/ctdet_coco_dla_2x.pth'
+#ARCH = 'dla_34'
 
-#MODEL_PATH = './CenterNet/models/ctdet_coco_resdcn18.pth'
-#ARCH = 'resdcn_18'
+MODEL_PATH = './CenterNet/models/ctdet_coco_resdcn18.pth'
+ARCH = 'resdcn_18'
 
 
 

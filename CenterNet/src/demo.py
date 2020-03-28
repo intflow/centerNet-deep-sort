@@ -9,6 +9,8 @@ import cv2
 
 from opts import opts
 from detectors.detector_factory import detector_factory
+import torch
+torch.backends.cudnn.deterministic = True
 
 image_ext = ['jpg', 'jpeg', 'png', 'webp']
 video_ext = ['mp4', 'mov', 'avi', 'mkv']

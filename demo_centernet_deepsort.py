@@ -5,11 +5,12 @@ import numpy as np
 
 #CenterNet
 import sys
-CENTERNET_PATH = '/home/asoft/centerNet-deep-sort/CenterNet/src/lib/'
+CENTERNET_PATH = './CenterNet/src/lib/'
 sys.path.insert(0, CENTERNET_PATH)
 from detectors.detector_factory import detector_factory
 from opts import opts
-
+#import torch
+#torch.backends.cudnn.deterministic = True
 
 MODEL_PATH = './CenterNet/models/ctdet_coco_dla_2x.pth'
 ARCH = 'dla_34'
