@@ -19,12 +19,12 @@ ARCH = 'dla_34'
 #ARCH = 'resdcn_18'
 
 
-TASK = 'ctdet' # or 'multi_pose' for human pose estimation
+
+TASK = 'ctdet'#'ctdet' # or 'multi_pose' for human pose estimation
 opt = opts().init('{} --load_model {} --arch {}'.format(TASK, MODEL_PATH, ARCH).split(' '))
 
 #vis_thresh
-opt.vis_thresh = 0.3
-
+opt.vis_thresh = 0.5
 
 #input_type
 opt.input_type = 'vid'   # for video, 'vid',  for webcam, 'webcam', for ip camera, 'ipcam'
@@ -78,7 +78,7 @@ class Detector(object):
         self.deepsort = DeepSort("deep/checkpoint/ckpt.t7")
 
 
-        self.write_video = True
+        self.write_video = False
 
     def open(self, video_path):
 
